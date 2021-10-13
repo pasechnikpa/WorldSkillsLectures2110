@@ -11,7 +11,8 @@
         }
         .block{
             min-height: 100vh;
-            padding: 50px;;
+            padding: 50px;
+            position: relative;
         }
         .block_blue{
             background-color: rgba(8, 17, 48, 1);
@@ -89,10 +90,77 @@
         .align-text{
             text-align: right;
         }
+        .navbar{
+            background-color: royalblue;
+            width: 100%;
+            position: sticky;
+            top: 0;
+        }
+        .navbar ul{
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        .navbar li a{
+            color: white;
+            text-decoration: none;
+            padding: 20px;
+            display: block;
+        }
+        .back-to-top{
+            background: red;
+            padding: 20px;
+        }
+        .button{
+            background: #ffc6a1;
+            width: fit-content;
+            padding: 10px 20px;
+            border-radius: 10px;
+            position: absolute;
+            right: 10px;
+            bottom:10px;
+        }
+        
+        .button2{
+            background: #ffc6a1;
+            width: fit-content;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        .block__content{
+            height: calc(100vh - 40px);
+        }
+        .block__footer{
+            height: 40px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .center-line{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+        }
     </style>
 </head>
 <body>
-    <div class="block block_blue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint? Iure nulla veritatis atque, quibusdam dolorem deleniti tempora corrupti ea numquam harum nam in labore hic animi. Magnam, magni corporis?</div>
+    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo ducimus vel at ipsum quis earum, aliquid facilis quos quasi libero dolor vitae, nesciunt corporis cum non, veritatis natus! Adipisci, sit.</div>
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Пункт меню</a></li>
+            <li><a href="#">Пункт меню</a></li>
+            <li><a href="#">Пункт меню</a></li>
+        </ul>
+    </div>
+    <div class="block block_blue">
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint? Iure nulla veritatis atque, quibusdam dolorem deleniti tempora corrupti ea numquam harum nam in labore hic animi. Magnam, magni corporis?</div>
+        <div class="button">Кнопка</div>
+    </div>
     <div class="block">
         <div class="items-group">
             <div class="item"></div>
@@ -103,7 +171,14 @@
             <div class="item item_wide"></div>
         </div>
     </div>
-    <div class="block block_blue">Voluptatem, officiis doloremque vero quaerat accusantium tempore nam quibusdam enim harum, animi ex est expedita iste inventore maxime rem ratione consectetur! Ipsam cupiditate tempora exercitationem perferendis officiis? Quam, esse facere.</div>
+    <div class="block block_blue">
+        <div class="block__content">
+            <p>Voluptatem, officiis doloremque vero quaerat accusantium tempore nam quibusdam enim harum, animi ex est expedita iste inventore maxime rem ratione consectetur! Ipsam cupiditate tempora exercitationem perferendis officiis? Quam, esse facere.</p>
+        </div>
+        <div class="block__footer">
+            <div class="button2">Кнопка</div>
+        </div>
+    </div>
     <div class="block ">
         <div class="items-group2">
             <div class="item"></div>
@@ -114,7 +189,9 @@
             <div class="item item_wide"></div>
         </div>
     </div>
-    <div class="block block_blue">Ipsa vero repellendus nulla culpa, accusantium ratione sapiente eius cupiditate asperiores, dolore distinctio explicabo, tempora nobis atque ut sint cumque veritatis eos. Odio, ipsa modi corporis minima libero omnis totam?</div>
+    <div class="block block_blue center">
+        <div class="button2">Кнопка</div>
+    </div>
     <div class="block">
         <div class="grid-container">
             <div class="grid-item grid-item-first">1</div>
@@ -126,7 +203,11 @@
             <div class="grid-item">7</div>
         </div>
     </div>
-    <div class="block block_blue">Ratione cum dignissimos omnis, ex, ipsa eos facilis consequuntur, minima perspiciatis sequi suscipit? Odit necessitatibus accusantium corrupti commodi voluptates ipsam dignissimos unde, nemo repudiandae nulla, culpa quidem quos inventore porro.</div>
+    <div class="block block_blue center-line">
+        <div class="button2">Кнопка</div>
+        <div class="button2">Кнопка</div>
+        <div class="button2">Кнопка</div>
+    </div>
     <div class="block">
         <div class="floated"></div>
         <div class="floated2">123123123</div>
@@ -144,5 +225,6 @@
             <div class="inline-block"></div>
         </div>
     </div>
+    <div class="back-to-top"><a href="#">Вернуться в начало страницы</a></div>
 </body>
 </html>
