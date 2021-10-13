@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .block{
+            min-height: 100vh;
+            padding: 50px;;
+        }
+        .block_blue{
+            background-color: rgba(8, 17, 48, 1);
+            color: white;
+        }
+        .items-group{
+            background: #fff4f4;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: stretch;
+            align-items: stretch;
+        }
+        .item{
+            flex-grow: 1;
+            width: 100px;
+            min-height: 150px;
+            border: 1px solid #cccccc;
+        }
+        .item_mini-height{
+            min-height: 50px;
+            flex-grow: 2;
+            flex-shrink: 2;
+        }
+        .item_wide{
+            min-height: 50px;
+            flex-grow: 0;
+            background: #cccccc;
+            flex-shrink: 0;
+        }
+        .items-group2{
+            display: flex;
+        }
+        .grid-container{
+            background: #ffc6a1;
+            display: grid;
+            grid-template-columns: 100px 1fr 1fr;
+            grid-template-rows: 200px 300px;
+        }
+        .grid-item-first{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        .grid-item{
+            min-height: 150px;
+            border: 1px solid #084e19;
+        }
+        .floated{
+            width: 200px;
+            height: 200px;
+            border:10px solid green;
+            float:right;
+            opacity: .5;
+        }
+        .floated2{
+            width: 300px;
+            height: 220px;
+            background: rgb(128, 0, 0);
+            float: right;
+            margin-right: 20px;
+        }
+        .cleared{
+            width: 300px;
+            height: 220px;
+            background: rgb(33, 22, 180);
+            clear: both;
+        }
+        .inline-block{
+            width: 200px;
+            height: 200px;
+            border:10px solid green;
+            display: inline-block;
+        }
+        .align-text{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="block block_blue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint? Iure nulla veritatis atque, quibusdam dolorem deleniti tempora corrupti ea numquam harum nam in labore hic animi. Magnam, magni corporis?</div>
+    <div class="block">
+        <div class="items-group">
+            <div class="item"></div>
+            <div class="item item_mini-height"></div>
+            <div class="item item_mini-height"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item item_wide"></div>
+        </div>
+    </div>
+    <div class="block block_blue">Voluptatem, officiis doloremque vero quaerat accusantium tempore nam quibusdam enim harum, animi ex est expedita iste inventore maxime rem ratione consectetur! Ipsam cupiditate tempora exercitationem perferendis officiis? Quam, esse facere.</div>
+    <div class="block ">
+        <div class="items-group2">
+            <div class="item"></div>
+            <div class="item item_mini-height"></div>
+            <div class="item item_mini-height"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item item_wide"></div>
+        </div>
+    </div>
+    <div class="block block_blue">Ipsa vero repellendus nulla culpa, accusantium ratione sapiente eius cupiditate asperiores, dolore distinctio explicabo, tempora nobis atque ut sint cumque veritatis eos. Odio, ipsa modi corporis minima libero omnis totam?</div>
+    <div class="block">
+        <div class="grid-container">
+            <div class="grid-item grid-item-first">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+        </div>
+    </div>
+    <div class="block block_blue">Ratione cum dignissimos omnis, ex, ipsa eos facilis consequuntur, minima perspiciatis sequi suscipit? Odit necessitatibus accusantium corrupti commodi voluptates ipsam dignissimos unde, nemo repudiandae nulla, culpa quidem quos inventore porro.</div>
+    <div class="block">
+        <div class="floated"></div>
+        <div class="floated2">123123123</div>
+        <p>Debitis quidem quas ex iure sapiente illum inventore repudiandae perferendis exercitationem cumque aut eos eius, quo ullam placeat voluptate iusto vero quasi expedita, architecto quaerat consequatur aperiam maxime laboriosam? Perspiciatis?</p>
+        <div class="cleared"></div>
+        <p>Debitis quidem quas ex iure sapiente illum inventore repudiandae perferendis exercitationem cumque aut eos eius, quo ullam placeat voluptate iusto vero quasi expedita, architecto quaerat consequatur aperiam maxime laboriosam? Perspiciatis?</p>
+        <p>Debitis quidem quas ex iure sapiente illum inventore repudiandae perferendis exercitationem cumque aut eos eius, quo ullam placeat voluptate iusto vero quasi expedita, architecto quaerat consequatur aperiam maxime laboriosam? Perspiciatis?</p>
+        <p>Debitis quidem quas ex iure sapiente illum inventore repudiandae perferendis exercitationem cumque aut eos eius, quo ullam placeat voluptate iusto vero quasi expedita, architecto quaerat consequatur aperiam maxime laboriosam? Perspiciatis?</p>
+        <p>Debitis quidem quas ex iure sapiente illum inventore repudiandae perferendis exercitationem cumque aut eos eius, quo ullam placeat voluptate iusto vero quasi expedita, architecto quaerat consequatur aperiam maxime laboriosam? Perspiciatis?</p>
+    </div>
+    <div class="block block_blue">Exercitationem laudantium eligendi nobis dolore enim perspiciatis consequuntur dolores, quibusdam labore corrupti culpa quod molestias debitis, quidem quam facere itaque aliquid iusto! Eos explicabo voluptate accusamus provident fuga, nobis delectus.</div>
+    <div class="block">
+        <div class="align-text">
+            <div class="inline-block"></div><div class="inline-block"></div>
+            <div class="inline-block"></div>
+        </div>
+    </div>
+</body>
+</html>

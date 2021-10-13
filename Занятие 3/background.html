@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .block{
+            width: 90vw;
+            height: 50vh;
+            border: 1px solid black;
+            margin: auto;
+            background-color: brown;
+            background-image: url('dog.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size:contain;
+            
+            /* background-repeat: repeat-y; */
+            color: rgba(255,10,10,.8);
+        }
+        .block2{
+            width: 90vw;
+            height: 50vh;
+            margin: auto;
+            background-color: rgb(135, 222, 171);
+            background-image: url('logo.png'), url('dog-mini.jpg'), url('dog-mini.jpg');
+            background-repeat: no-repeat, repeat-x, repeat-x;
+            padding: 60px 10px ; 
+            background-position: 20px 100px, left bottom, left top;
+        }
+        .block3{
+            width: 90vw;
+            margin: auto;
+            background-image: url('dog.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size:cover;
+            
+            /* background-repeat: repeat-y; */
+            color: white;
+        }
+        .block3-1{
+            min-height: 300px;
+            padding: 300px 10px 10px;
+            font-size: 40px;
+            background-color: rgba(102, 77, 77, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum repellendus architecto reprehenderit ab nostrum, fugiat magni, atque ad enim tenetur vitae velit ut asperiores eos a, laboriosam ducimus neque ullam!
+    </div>
+    <div class="block2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum repellendus architecto reprehenderit ab nostrum, fugiat magni, atque ad enim tenetur vitae velit ut asperiores eos a, laboriosam ducimus neque ullam!
+    </div>
+    <div class="block3">
+        <div class="block3-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum repellendus architecto reprehenderit ab nostrum, fugiat magni, atque ad enim tenetur vitae velit ut asperiores eos a, laboriosam ducimus neque ullam!</div>
+    </div>
+</body>
+</html>
