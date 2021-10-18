@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .file-another{
+            display: block;
+            color: white;
+            background: rgb(85, 9, 184);
+            border-radius: 20px;
+            text-align: center;
+            padding: 5px;
+        }
+        .file-input{
+            display: none;
+        }
+        .submit{
+            background: #17a5aa;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .text-input{
+            border: none;
+            background: #b4e9eb;
+            padding: 5px;
+            outline: none;
+            color: white;
+        }
+        .text-input:focus{
+            background: rgb(240, 162, 162);
+        }
+        .input-email{
+            background: #c26565;
+            border: 1px solid black;
+        }
+        .input-email:valid{
+            background: white;
+        }
+        .text-input:required{
+            border-left: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="text-field" class="text-input-label">Введите текст</label>
+            <input id="text-field" class="text-input" type="text" placeholder="Введите текст" required/>
+        </div>
+        <input type="text" class="text-input" value="Нередактируемое поле" readonly/>
+        <input type="password" class="text-input" placeholder="Введете пароль" />
+        <input type="email" class="input-email" placeholder="Введете электронную почту" />
+        <input type="number" class="text-input" placeholder="Введете число" />
+        <input type="date" placeholder="Введете дату" />
+        <input type="color" />
+        <input type="week" />
+        <input type="number" placeholder="Введете число" />
+        <div>
+            <label for="checkbox1">Нажмите чтобы поставить/снять флажок</label>
+            <input type="checkbox" id="checkbox1">
+        </div>
+        <div>
+            <div>
+                <label for="r1">Radio 1</label>
+                <input type="radio" name="r" id="r1">
+            </div>
+            <div>
+                <label for="r2">Radio 2</label>
+                <input type="radio" name="r" id="r2">
+            </div>
+        </div>
+        <label for="s">Выпадающий список</label>
+        <select id="s" size="3" multiple>
+            <option>Пункт 1</option>
+            <option>Пункт 2</option>
+            <option>Пункт 3</option>
+        </select>
+        
+        <select id="s2">
+            <option>Пункт 1</option>
+            <option>Пункт 2</option>
+            <option>Пункт 3</option>
+        </select>
+        <div>
+            <label class="file-another" for="f1">Выберите файл</label>
+            <input type="file" class="file-input" id="f1" />
+        </div>
+
+        <input type="button" value="Просто кнопка"/>
+        <input type="reset" value="Очистить"/>
+        <input class="submit" type="submit" value="Авторизоваться"/>
+    </form>
+</body>
+</html>
