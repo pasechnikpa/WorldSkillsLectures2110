@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type='text']{
+            border: 1px solid red;
+        }
+        input[type='password']{
+            border: 1px solid green;
+        }
+        input[type='email']{
+            border: 1px solid blue;
+        }
+        input[value*='w']{
+            border-style: double;
+        }
+        a[href^='https']{
+            color: greenyellow;
+        }
+        a[href^='http:']{
+            color: red;
+        }
+        a[href*='worldskills.ru']{
+            color: rgb(129, 72, 8);
+        }
+        .cb:checked{
+            margin-left: 30px;
+        }
+        .cb:checked + label{
+            color: red;
+        }
+        .rad:checked + label{
+            color: red;
+        }
+        .rad:checked{
+            margin-left: 30px;
+        }
+        .rad:checked + label{
+            color: green;
+        }
+        .rad:indeterminate{
+            margin-left: 100px;
+        }
+        .rad:indeterminate + label{
+            color: #cccccc;
+        }
+        .submit{
+            border: none;
+            background: green;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .submit:hover{
+            background: wheat;
+            color: black;
+        }
+        img:hover{
+            opacity: .5;
+        }
+        a:hover{
+            color: yellowgreen;
+        }
+        .help{
+            cursor: help;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" value="world skills" placeholder="текст">
+    <input type="text" placeholder="текст">
+    <input type="text" placeholder="текст">
+    <input type="password" placeholder="пароль"/>
+    <input type="password" placeholder="пароль" />
+    <input type="password" placeholder="пароль" />
+    <input type="email" />
+    <input type="email" />
+    <input type="email" />
+    <div>
+        <input type="checkbox" class="cb"><label>Выбрать</label>
+    </div>
+    <div>
+        <input type="checkbox" class="cb"><label>Выбрать</label>
+    </div>
+    <div>
+        <input type="checkbox" class="cb"><label>Выбрать</label>
+    </div>
+    <div>
+        <div>
+            <input type="radio" name="r" id="r1" class="rad">
+            <label for="r1">Radio 1</label>
+        </div>
+        <div>
+            <input type="radio" name="r" id="r2" class="rad">
+            <label for="r2">Radio 2</label>
+        </div>
+    </div>
+    <img src="dog-mini.jpg" alt=""/>
+    <img src="dog-mini.jpg" />
+    <a href="http://sutd.ru">СПбГУПТД</a>
+    <a href="https://sutd.ru">СПбГУПТД</a>
+    <a href="https://ya.ru">ya</a>
+    <a href="https://worldskills.ru/voprosyi-i-otvetyi.html">ws</a>
+    <input type="submit" class="submit"/>
+    <a href="#" class="help">Справка</a>
+</body>
+</html>
