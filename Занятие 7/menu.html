@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .menu{
+            background-color: rgb(10, 7, 0);
+        }
+        .menu ul{
+            padding: 0;
+        }
+        .menu li{
+            list-style: none;
+        }
+        .menu a{
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .menu > ul{
+            display: flex;
+            justify-content: space-around;
+        }
+        .menu > ul > li{
+            position: relative;
+        }
+        .menu > ul > li > a{
+            font-weight: bold;
+            color: white;
+        }
+        .menu > ul > li > ul{
+            /* padding: 10px; */
+            /* background-color: blanchedalmond; */
+            width: fit-content;
+            font-style: italic;
+            display: none;
+            position: absolute;
+            padding-top: 20px;
+        }
+        .menu > ul > li > ul > li{
+            background-color: tomato;
+        }
+        .menu > ul > li:hover > ul{
+            display: block;
+        }
+        .menu > ul > li > ul a{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="#">1 О нас</a>
+                <ul>
+                    <li>
+                        <a href="#">Девиз фирмы</a>
+                    </li>
+                    <li>
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">2 Пункт</a>
+                <ul>
+                    <li>
+                        <a href="#">2.1 Девиз фирмы</a>
+                    </li>
+                    <li>
+                        <a href="#">2.2 Контакты</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">3 Пункт</a>
+                <ul>
+                    <li>
+                        <a href="#">3.1 Девиз фирмы</a>
+                    </li>
+                    <li>
+                        <a href="#">3.2 Контакты</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">4 Пункт</a>
+                <ul>
+                    <li>
+                        <a href="#">4.1 Девиз фирмы</a>
+                    </li>
+                    <li>
+                        <a href="#">4.2 Контакты</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam optio culpa unde saepe nesciunt eveniet ratione et vero. Rem, qui a officia nulla quidem explicabo in facilis eos fugit beatae.</p>
+</body>
+</html>

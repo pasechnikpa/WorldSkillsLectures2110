@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .spoiler:hover{
+            border: 1px solid orange;
+        }
+        .spoiler .content{
+            display: none;
+        }
+        .spoiler:hover .content{
+            display: block;
+        }
+        .hide-inline .hidden-text{
+            display: none;
+        }
+        .hide-inline:hover .hidden-text{
+            display: inline;
+        }
+        .hide-inline:hover .hide-text{
+            display: none;
+        }
+        .resizable-image{
+            width: 100px;
+        }
+        .resizable-image:hover{
+            position: absolute;
+            width: 100vh;
+            top: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="spoiler">
+        <h1>Text</h1>
+        <div class="content">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod incidunt nisi consectetur, nihil molestiae temporibus enim ducimus placeat repellat cumque est voluptas culpa, adipisci, labore minus aut! Eveniet, facere non.
+        </div>
+    </div>
+    <div class="hide-inline">
+        <h1>Hide inline</h1>
+        <p>
+            <span class="hide-text">Lorem old</span>
+            <a href="#" class="hidden-text">Lorem new</a> ipsum dolor sit amet, consectetur adipisicing elit. Possimus placeat veniam officia eos! Perferendis ratione voluptatibus tempore nulla! Quis, libero debitis commodi praesentium accusamus voluptas suscipit numquam quidem quos at?
+            
+        </p>
+    </div>
+    <img src="dog.jpg" class="resizable-image">
+</body>
+</html>

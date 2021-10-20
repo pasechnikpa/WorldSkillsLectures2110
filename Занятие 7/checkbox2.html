@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .r1, .r2{
+            display: none;
+        }
+        .label1, .label2{
+            border:1px solid blue;
+            border-radius: 10px;
+            padding: 5px 10px;
+        }
+        .r1:checked ~ .container .label1, .r2:checked ~ .container .label2,
+        .label1:hover, .label2:hover{
+            background-color: blue;
+            color: white;
+        }
+        .block1, .block2{
+            display: none;
+        }
+        .r1:checked ~ .container .block1, .r2:checked ~ .container .block2{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <input type="radio" id="r1" class="r1" name="r"/>
+    <input type="radio" id="r2" class="r2" name="r"/>
+    <div class="container">
+        <div>
+            <label for="r1" class="label1">Label 1</label>
+            <label for="r2" class="label2">Label 2</label>
+        </div>
+        <div class="block1">
+            1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora laboriosam autem accusantium perferendis veritatis, incidunt explicabo sed sunt inventore magni corporis soluta delectus laborum repellat ex. Blanditiis molestias labore quaerat?
+        </div>
+        <div class="block2">
+            2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora laboriosam autem accusantium perferendis veritatis, incidunt explicabo sed sunt inventore magni corporis soluta delectus laborum repellat ex. Blanditiis molestias labore quaerat?
+        </div>
+    </div>
+</body>
+</html>
