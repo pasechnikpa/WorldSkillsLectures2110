@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form-container{
+            display: grid;
+            
+            /* grid-template-columns: minmax(100px, 50%) minmax(100px, 50%); */
+            /* grid-template-columns: repeat(2, minmax(100px, 50%)); */
+            grid-template-columns: repeat(auto-fill, minmax(100px, 50%));
+            grid-gap:  10px 0;
+            max-width: 560px;
+            margin:0 auto;
+            padding: 20px;
+        }
+        .input-text{
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .heading{
+            grid-column-start: 1;
+            grid-column-end: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1 class="heading">Heading</h1>
+        <div>
+            <label>Text</label>
+        </div>
+        <div>
+            <input type="text" class="input-text"/>
+        </div>
+        <div>
+            <label>Text</label>
+        </div>
+        <div>
+            <input type="text" class="input-text"/>
+        </div>
+        <div>
+            <label>Text</label>
+        </div>
+        <div>
+            <input type="text" class="input-text"/>
+        </div>
+        <div>
+            Text
+        </div>
+        <div>
+            <div>
+                <input type="radio" />
+                <label>Text</label>
+            </div>
+            <div>
+                <input type="radio" />
+                <label>Text</label>
+            </div>
+        </div>
+        <div>
+            Text
+        </div>
+        <div>
+            <input type="checkbox" />
+            <label>Text</label>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .my-strange-list li{
+            list-style: none;
+        }
+        .my-strange-list li::before{
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: red;
+            margin-right: 5px;
+        }
+        .my-strange-list li:hover::before{
+            background: green;
+        }
+        .my-strange-list li:hover::after{
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: blue;
+            margin-right: 5px;
+        }
+        .float-container{
+            background: cadetblue;
+        }
+        .float{
+            width: 20px;
+            height: 20px;
+            background: brown;
+            float: left;
+        }
+        .float-container::after{
+            content: '';
+            clear: both;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul class="my-strange-list">
+        <li>Text</li>
+        <li>Text</li>
+        <li>Text</li>
+        <li>Text</li>
+    </ul>
+
+    <div class="float-container">
+        <div class="float"></div>
+        <div class="float"></div>
+        <div class="float"></div>
+        <div class="float"></div>
+        <div class="float"></div>
+    </div>
+</body>
+</html>
