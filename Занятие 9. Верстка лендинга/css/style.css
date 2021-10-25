@@ -38,11 +38,17 @@ a{
 }
 .header__adress{
     font-size: 12px;
+    margin-right: 82px;
+}
+.header__tel-time{
+    background: url('../images/tel.svg') no-repeat;
+    background-position: 0 5px;
+    padding-left: 32px;
 }
 .header__tel{
     font-size: 20px;
 }
 .header__time{
-    font-size: 20px;
+    font-size: 13px;
 }
 /* 12, 20, 13*/
