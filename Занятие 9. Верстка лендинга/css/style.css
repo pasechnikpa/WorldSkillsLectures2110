@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.wrapper{
+    width: 80%;
+    margin: 0 auto;
+}
+/* Разделы */
+.section{
+    min-height: 100vh;
+}
+.section:nth-of-type(even){
+    background: #081130;
+}
+/**/
+.header{
+    background: #081130;
+    color: white;
+}
+.header a{
+    color: white;
+}
+.header__content{
+    display: flex;
+    justify-content: space-between;
+}
+.header__title{
+    font-size: 21px;
+}
+.header__address-phone{
+    display: flex;
+}
+.header__adress{
+    font-size: 12px;
+}
+.header__tel{
+    font-size: 20px;
+}
+.header__time{
+    font-size: 20px;
+}
+/* 12, 20, 13*/
