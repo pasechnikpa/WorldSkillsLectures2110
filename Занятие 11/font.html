@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'MyMontserrat';
+            src: url('fonts/Montserrat-Regular.ttf');
+        }
+        @font-face {
+            font-family: 'MyMontserrat';
+            font-weight: 900;
+            src: url('fonts/Montserrat-ExtraBold.ttf');
+        }
+        @font-face {
+            font-family: 'MyMontserrat';
+            font-weight: 100;
+            src: url('fonts/Montserrat-ExtraLight.ttf');
+        }
+        body{
+            font-family: 'MyMontserrat';
+            font-weight: 100;
+            font-style: italic;
+        }
+        h1{
+            font-weight: 900;
+        }
+        .flex{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        html{
+            scrollbar-color: yellow blue;
+        }
+        @supports not (scrollbar-color: yellow blue){
+            h1{
+                color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Text</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi aliquid magni qui harum sint praesentium et culpa, in autem totam itaque minus veniam consectetur nulla corrupti ut minima earum consequuntur!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, iste suscipit. Delectus sapiente veritatis similique nisi cum, adipisci modi veniam magni pariatur. Temporibus minima ea optio culpa debitis dolor esse.</p>
+    <div class="flex">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolore perferendis corrupti atque quas vel explicabo a quibusdam blanditiis minima cupiditate distinctio fuga assumenda, velit veniam eligendi officiis. Illum, libero?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolore perferendis corrupti atque quas vel explicabo a quibusdam blanditiis minima cupiditate distinctio fuga assumenda, velit veniam eligendi officiis. Illum, libero?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolore perferendis corrupti atque quas vel explicabo a quibusdam blanditiis minima cupiditate distinctio fuga assumenda, velit veniam eligendi officiis. Illum, libero?</p>
+    </div>
+</body>
+</html>
