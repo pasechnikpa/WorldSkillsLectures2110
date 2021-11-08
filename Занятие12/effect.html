@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .light:hover {
+            box-shadow: 0 5px 20px rgb(0 0 0 / 50%);
+            transition-delay: .1s;
+            z-index: 2;
+        } */
+        .light:hover:before {
+            transform: skewX(-45deg) translateX(24em);
+            transition: all .5s ease-in-out;
+        }
+        .light:before {
+            content: "";
+            background-color: hsla(0,0%,100%,.5);
+            height: 100%;
+            width: 3em;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -5em;
+            transform: skewX(-45deg) translateX(0);
+            transition: none;
+        }
+        .main__button {
+            background: linear-gradient(180deg,#a7cf34,#78b228);
+            border-radius: 6px;
+            width: 250px;
+            height: 64px;
+            position: relative;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button class="main__button light" type="button">Узнать свободные даты</button>
+</body>
+</html>
