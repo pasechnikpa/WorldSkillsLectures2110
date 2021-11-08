@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .square{
+            width: 200px;
+            height:200px;
+            border:1px solid;
+            text-align: center;
+            background: rgb(243, 221, 205) url('card.jpg')
+        }
+        .square1{
+            transform: rotate(0deg);
+            margin: 50px;
+            transform-origin: right center;
+            transition: all 2s 0s ease-out;
+        }
+        .square1:hover{
+            transform: rotate(-45deg);
+        }
+        .square2{
+            transform-origin: right center;
+            transition: all 2s 0s ease-out;
+        }
+        .square2:hover{
+            transform: scale(0.5);
+
+        }
+        .square3{
+            transform: scaleX(2) scaleY(0.5);
+        }
+        .square4{
+            transform: rotateX(60deg) perspective(100px) ;
+        }
+        .square5{
+            transform: rotateY(60deg) ;
+        }
+        .square6{
+            transform: skew(30deg, 0);
+        }
+        .square7{
+            transform: skewX(30deg);
+        }
+        .square8{
+            transform: skewY(30deg);
+        }
+        
+        .square9{
+            /* transform-style: preserve-3d; */
+            transform: perspective(600px) rotateY(60deg);
+        }
+        .square10{
+            transform: translate(300px, 100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="square square1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, magni mollitia placeat cumque est minima. Rerum blanditiis eveniet corrupti, sint quas minima tenetur id reiciendis! Molestiae dolorum facere minus cum?
+    </div>
+    <div class="square square2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa repudiandae incidunt odio voluptatem quae. Quasi, facere. Soluta aliquid dolorem esse sunt, ad amet nihil dolore facilis illo. Minus, illum cum?</div>
+    <div class="square square3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa repudiandae incidunt odio voluptatem quae. Quasi, facere. Soluta aliquid dolorem esse sunt, ad amet nihil dolore facilis illo. Minus, illum cum?</div>
+    <div class="square square4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa repudiandae incidunt odio voluptatem quae. Quasi, facere. Soluta aliquid dolorem esse sunt, ad amet nihil dolore facilis illo. Minus, illum cum?</div>
+    <div class="square square5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non architecto illum unde consequatur aspernatur minus saepe molestiae eveniet porro! Voluptatibus odit soluta neque numquam commodi explicabo fuga, pariatur eaque dolorem.</div>
+    <div class="square square6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non architecto illum unde consequatur aspernatur minus saepe molestiae eveniet porro! Voluptatibus odit soluta neque numquam commodi explicabo fuga, pariatur eaque dolorem.</div>
+    <div class="square square7">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non architecto illum unde consequatur aspernatur minus saepe molestiae eveniet porro! Voluptatibus odit soluta neque numquam commodi explicabo fuga, pariatur eaque dolorem.</div>
+    <div class="square square8">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non architecto illum unde consequatur aspernatur minus saepe molestiae eveniet porro! Voluptatibus odit soluta neque numquam commodi explicabo fuga, pariatur eaque dolorem.</div>
+    <div class="square square9">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non architecto illum unde consequatur aspernatur minus saepe molestiae eveniet porro! Voluptatibus odit soluta neque numquam commodi explicabo fuga, pariatur eaque dolorem.</div>
+    <div class="square square10">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non architecto illum unde consequatur aspernatur minus saepe molestiae eveniet porro! Voluptatibus odit soluta neque numquam commodi explicabo fuga, pariatur eaque dolorem.</div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id sit accusamus ducimus ipsa labore minus iusto dicta! Minus quas, iusto numquam maiores obcaecati perspiciatis molestias omnis quidem est vel mollitia.</p>
+</body>
+</html>
