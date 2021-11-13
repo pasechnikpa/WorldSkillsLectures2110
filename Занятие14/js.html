@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block{
+            width: 200px;
+            height:200px;
+            border: 1px solid;
+        }
+        .red{
+            background: #ffeeee;
+        }
+        .green{
+            background: #eeffee;
+        }
+        .blue{
+            color: blue;
+        }
+        .red .hide_in_red {
+            display: none;
+        }
+        .block2{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="block" onclick="alert('Вывод сообщения')">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam dignissimos labore qui repudiandae, illum cumque tempore unde blanditiis aut! Fugit, cumque. Odio exercitationem fuga libero aut suscipit nobis optio veniam.
+    </div>
+    <div class="block" onclick="this.style.color = 'red'">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam dignissimos labore qui repudiandae, illum cumque tempore unde blanditiis aut! Fugit, cumque. Odio exercitationem fuga libero aut suscipit nobis optio veniam.
+    </div>
+    <div class="block" onclick="this.style.background = 'red'">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam dignissimos labore qui repudiandae, illum cumque tempore unde blanditiis aut! Fugit, cumque. Odio exercitationem fuga libero aut suscipit nobis optio veniam.
+    </div>
+    <div class="block" onclick="this.classList.add('red')">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam dignissimos labore qui repudiandae, illum cumque tempore unde blanditiis aut! Fugit, cumque. Odio exercitationem fuga libero aut suscipit nobis optio veniam.
+    </div>
+    <div class="block red" onclick="this.classList.remove('red')">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam dignissimos labore qui repudiandae, illum cumque tempore unde blanditiis aut! Fugit, cumque. Odio exercitationem fuga libero aut suscipit nobis optio veniam.
+    </div>
+    <div class="block" onclick="this.classList.toggle('red')">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam dignissimos labore qui repudiandae, illum cumque tempore unde blanditiis aut! Fugit, cumque. Odio exercitationem fuga libero aut suscipit nobis optio veniam.
+        <p class="hide_in_red">Скрываемый текст</p>
+    </div>
+    <div class="block" onclick="document.querySelector('#z').classList.toggle('red')">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam dignissimos labore qui repudiandae, illum cumque tempore unde blanditiis aut! Fugit, cumque. Odio exercitationem fuga libero aut suscipit nobis optio veniam.
+    </div>
+    <div class="block2" id="z">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum incidunt excepturi iste vero pariatur in soluta quod doloribus neque aspernatur eaque harum inventore a, nobis esse non quibusdam fugit distinctio!
+    </div>
+    <div class="block" onclick="doIt()">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam dignissimos labore qui repudiandae, illum cumque tempore unde blanditiis aut! Fugit, cumque. Odio exercitationem fuga libero aut suscipit nobis optio veniam.
+    </div>
+    <div class="block2" id="z2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum incidunt excepturi iste vero pariatur in soluta quod doloribus neque aspernatur eaque harum inventore a, nobis esse non quibusdam fugit distinctio!
+    </div>
+    
+    <div class="block" onclick="doIt()">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam dignissimos labore qui repudiandae, illum cumque tempore unde blanditiis aut! Fugit, cumque. Odio exercitationem fuga libero aut suscipit nobis optio veniam.
+    </div>
+    
+    <div class="block2" id="z3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum incidunt excepturi iste vero pariatur in soluta quod doloribus neque aspernatur eaque harum inventore a, nobis esse non quibusdam fugit distinctio!
+    </div>
+    
+    <div class="block" onclick="doZ4BlueAndGreen2()">
+        doZ4BlueAndGreen
+    </div>
+    
+    <div class="block2 red" id="z4">
+        Z4
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum incidunt excepturi iste vero pariatur in soluta quod doloribus neque aspernatur eaque harum inventore a, nobis esse non quibusdam fugit distinctio!
+    </div>
+    <script>
+        function doIt(){
+            document.querySelector('#z2').classList.toggle('red')
+            document.querySelector('#z3').classList.toggle('red')
+        }
+        function doZ4BlueAndGreen(){
+            document.querySelector('#z4').classList.remove('red')
+            document.querySelector('#z4').classList.add('green')
+            document.querySelector('#z4').classList.add('blue')
+        }
+        function doZ4BlueAndGreen2(){
+            let z4ClassList = document.querySelector('#z4').classList
+            let y = 2
+            let z = 'text'
+            z4ClassList.remove('red')
+            z4ClassList.add('green')
+            z4ClassList.add('blue')
+            z4ClassList.add('yellow')
+            z4ClassList.add('magenta')
+            z4ClassList.add('cyan')
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .block{
+            width: 250px;
+            height: 250px;
+            background: #ffeeee;
+            padding: 20px;
+            font-size: 14px;
+            transition: 3s;
+        }
+        .block:hover{
+            filter: none;
+        }
+        .block img{
+            width: 100%;
+        }
+        .block1{
+            filter: blur(10px);
+        }
+        .block2{
+          
+           filter: brightness(2);
+        }
+        .block3{
+            filter: contrast(200);
+        }
+        .block4{
+            filter: drop-shadow(2px 2px 2px black);
+        }
+        .block4 span{
+            filter: drop-shadow(2px 2px 2px black);
+        }
+        .block5{
+            box-shadow: 2px 2px 2px black;
+        }
+        .block5 span{
+            box-shadow: 2px 2px 2px black;
+        }
+        .block6{
+            filter: grayscale(1);
+        }
+        .block6:hover{
+            filter: grayscale(0);
+            transition: 3s;
+        }
+        .block7{
+            background: red;
+            color: green;
+            filter: hue-rotate(90deg);
+        }
+        .block7:hover{
+            filter: hue-rotate(360deg);
+            transition: 6s;
+        }
+        .block8{
+            filter: invert(1);
+        }
+        .block9{
+            filter: opacity(0.5);
+        }
+        .block10{
+            opacity: 0.5;
+        }
+        .block11{
+            filter: saturate(0);
+        }
+        .block12{
+            filter: sepia(1)
+        }
+        .block13{
+            filter: sepia(1) blur(2px) opacity(0.5);
+        }
+        .block14{
+            filter: hue-rotate(90deg) blur(2px) opacity(0.5);
+        }
+        .block15{
+            filter: hue-rotate(90deg) blur(2px) opacity(0.5);
+        }
+        .test{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="block block1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum ex voluptas pariatur quidem maxime natus, sed dicta minima in nesciunt. Voluptates nobis repellat tempore iusto impedit rem iure temporibus possimus?<img src="card.jpg" alt=""></div>
+    <div class="block block2">Molestiae, accusamus ipsa iure saepe ipsum minima aspernatur quasi voluptatum possimus porro maiores, quaerat impedit reiciendis nisi eius obcaecati odit recusandae. Itaque dolorum facere incidunt porro quasi dignissimos sint error?<img src="card.jpg" alt=""></div>
+    <div class="block block3">Ducimus, atque hic. Praesentium, voluptatum quisquam quae reprehenderit sapiente, impedit nostrum, cupiditate similique dicta incidunt libero ullam consequatur sint laudantium. Voluptatibus voluptatum placeat eius eum nemo unde deserunt sunt delectus.<img src="card.jpg" alt=""></div>
+    <div class="block block4"><span>Animi</span> earum nam repellendus ea cum quisquam, nostrum eaque illum ex harum cumque omnis maxime, facere aliquid voluptatum debitis provident dolore? Nihil excepturi error deserunt laborum assumenda eos quo id.<img src="card.jpg" alt=""></div>
+    <div class="block block5"><spna>Cupiditate</spna>, incidunt. Sapiente sunt magni id, voluptatem dolores ipsam eius facilis expedita aliquid ratione molestias magnam totam perspiciatis consequuntur nemo! Facilis, ut earum! Porro repellendus nemo id enim labore a!<img src="card.jpg" alt=""></div>
+    <div class="block block6">Modi dolorum dolorem non aliquid, obcaecati tempora? Quasi ipsa aspernatur sed voluptate sunt nemo itaque fuga ad est maxime, ipsum dolores quia magni nostrum eligendi, blanditiis magnam vitae delectus neque?<img src="card.jpg" alt=""></div>
+    <div class="block block7">Quibusdam ipsam beatae sit sint soluta autem corporis molestiae, aut officia perferendis odit provident deleniti qui similique harum? Ut totam cum veniam dolorem sed eum similique illum adipisci, dolores tempora!<img src="card.jpg" alt=""></div>
+    <div class="block block8">Ab corrupti facere, soluta veniam iste pariatur similique molestiae quidem minima blanditiis harum officia mollitia modi. Ea assumenda ex fugiat cumque delectus, illo eum ipsa. Laudantium maiores consequatur nihil excepturi.<img src="card.jpg" alt=""></div>
+    <div class="block block9"><span>Tempore</span> perferendis nostrum quos, explicabo quas odit minus, ducimus sit temporibus officiis neque illum error? Laboriosam, accusantium? Aperiam, pariatur atque natus officia, eius exercitationem eligendi nobis nulla dicta, mollitia quae!<img src="card.jpg" alt=""></div>
+    <div class="block block10"><span>Tempore</span>Cum aliquam quidem consectetur, tenetur deserunt optio saepe iusto laborum rem vitae incidunt veritatis architecto voluptatem ratione natus voluptatum molestias, magnam expedita, beatae suscipit impedit assumenda nostrum. Quis, sint temporibus!<img src="card.jpg" alt=""></div>
+    <div class="block block11">Saepe dignissimos cupiditate quos voluptates alias tempora facilis culpa nemo minima in voluptatum sed ipsa esse qui excepturi, optio blanditiis ipsum itaque nihil iure. Cum ipsum natus laudantium placeat saepe!<img src="card.jpg" alt=""></div>
+    <div class="block block12">Officia aliquam recusandae, distinctio voluptatem blanditiis totam perspiciatis labore saepe fugiat soluta id inventore quo? Est accusamus error ullam eligendi odit rem ut! Deleniti ipsum modi at dolorem? Officia, eum.<img src="card.jpg" alt=""></div>
+    <div class="block block13">Amet libero iure similique aperiam vel sint non earum soluta tempore tempora enim ea cumque vitae, dolorum necessitatibus assumenda? Quisquam mollitia sit similique harum possimus consectetur magni accusamus explicabo perferendis?<img src="card.jpg" alt=""></div>
+    <div class="block block14">
+        <svg width="250px" viewBox="0 0 10 10" class="svg-1">
+            <path d="M2,2 L8,8 L10,0 L0 0 " stroke="red" fill="none"/>
+          </svg>
+    </div>
+    <div class="block block15">
+        <div class="test">TEST</div>Corporis est id omnis delectus voluptas laudantium, fuga provident quam asperiores facilis suscipit consequuntur ducimus tempore amet repellendus eaque quaerat sapiente maxime nulla? Dolore molestiae, explicabo nisi consequatur omnis doloremque.<img src="card.jpg" alt=""></div>
+    
+</body>
+</html>

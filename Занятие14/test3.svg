@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="200"
+   height="200"
+   viewBox="0 0 200 200"
+   version="1.1"
+   id="svg14"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs18" />
+  <line
+     x1="0"
+     y1="0"
+     x2="200"
+     y2="20"
+     stroke-width="1"
+     stroke="red"
+     id="line2" />
+  <line
+     x1="0"
+     y1="40"
+     x2="200"
+     y2="20"
+     stroke-width="1"
+     stroke="green"
+     id="line4" />
+  <polyline
+     points="0,50 40,50 100,100"
+     stroke="#0000ff"
+     fill="#ffff00"
+     id="polyline6"
+     transform="matrix(1.27457,0,0,1.5735303,32.590071,-45.694243)" />
+  <rect
+     width="100"
+     height="100"
+     fill="#ff0000"
+     x="11.122071"
+     y="90.937111"
+     id="rect8" />
+  <circle
+     cx="174.47595"
+     cy="64.981506"
+     r="20"
+     fill="#008000"
+     id="circle10" />
+  <ellipse
+     cx="150.67818"
+     cy="158.19975"
+     rx="20"
+     ry="40"
+     fill="#008000"
+     id="ellipse12" />
+</svg>

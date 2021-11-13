@@ -1,0 +1,8 @@
+<svg width="380" height="245" viewBox="0 0 380 245" fill="none"  xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="blur" x="0" y="0">
+            <feGaussianBlur in="SourceGrafic" stdDeviation="2" />
+        </filter>
+    </defs>
+    <image href="/Занятие14/card.jpg" height="245" width="380"/>
+</svg>

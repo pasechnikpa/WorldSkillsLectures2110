@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            background: #e2e2e2;
+        }
+        .block{
+            width: 200px;
+            aspect-ratio: 1;
+            flex-grow: 1;
+            border: 1px solid;
+            color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+        }
+        .block1{
+            background: linear-gradient(red, blue, green, yellow);
+        }
+        .block2{
+            background: linear-gradient(to top, red, blue, green, yellow);
+        }
+        .block3{
+            background: linear-gradient(to bottom right, red, blue, green, yellow);
+        }
+        .block4{
+            background: linear-gradient(30deg, red, blue, green, yellow);
+        }
+        .block5{
+            background: linear-gradient(red 10px, blue, green 50%);
+        }
+        .block6{
+            background: linear-gradient(red 9px, 10px, blue, 50%, green);
+        }
+        .block7{
+            background: linear-gradient(white 33%, blue 33%, blue 66%, red 66%);
+        }
+        .block8{
+            background: linear-gradient(white, 33%, blue 33%, 66%, red 66%);
+        }
+        /**/
+        .block9{
+            /* background: linear-gradient(white, blue 33%, blue 66%, red); */
+            background: linear-gradient(white, blue 33% 66%, red);
+        }
+        .block10{
+            background: linear-gradient(-45deg, #0000, red);
+        }
+        .block11{
+            background: 
+                linear-gradient(#0000, 70%, red),
+                linear-gradient(45deg,#0000, 70%, green),
+                linear-gradient(-45deg,#0000, 70%, blue);
+        }
+        .block12{
+            background: linear-gradient(white 0 5px, blue 5px 10px, red 10px 15px);
+        }
+        .block13{
+            background: repeating-linear-gradient(white 0 5px, blue 5px 10px, red 10px 15px);
+        }
+        .block14{
+            background: repeating-linear-gradient(45deg, white, blue, red, white 15px);
+        }
+        .block15{
+            background: repeating-linear-gradient(#0000 0 9px, #cccccc 10px);
+        }
+        .block16{
+            background: 
+                repeating-linear-gradient(#0000 0 9px, #cccccc 10px),
+                repeating-linear-gradient(90deg,#0000 0 9px, #cccccc 10px)
+                ;
+        }
+        .block17{
+            background: 
+                repeating-linear-gradient(#0000 0 5px, #cccccc 10px),
+                repeating-linear-gradient(90deg,#0000 0 5px, #cccccc 10px)
+                ;
+        }
+        
+        .block18{
+            background: 
+                repeating-linear-gradient(#0000 0 98px, rgb(221, 135, 135) 98px 100px),
+                repeating-linear-gradient(90deg,#0000 0 98px, rgb(221, 135, 135) 98px 100px),
+                repeating-linear-gradient(#0000 0 9px, #cccccc 10px),
+                repeating-linear-gradient(90deg,#0000 0 9px, #cccccc 10px)
+                ;
+        }
+        .block19{
+            display: block;
+            font-size: 9px;
+            line-height: 10px;
+            padding: 10px;
+            background: repeating-linear-gradient(#0000 0 9px, #cccccc 10px);
+        }
+        .block20{
+            display: block;
+            font-size: 8px;
+            line-height: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 10px 12px;
+            letter-spacing: 5.2px;
+            background: 
+                repeating-linear-gradient(#0000 0 9px, #cccccc 10px),
+                repeating-linear-gradient(90deg,#0000 0 9px, #cccccc 10px)
+                ;
+        }
+        
+        .block21{
+            background: radial-gradient(red, green 70%, blue);
+        }
+        
+        .block22{
+            background: radial-gradient(at 130% -30%, red, green, blue);
+        }
+        
+        .block23{
+            background: radial-gradient(ellipse closest-side, red, green, blue);
+        }
+        
+        .block24{
+            background: radial-gradient(ellipse farthest-corner at 90% 90%, red, green 70%, blue);
+        }
+        .block24{
+            background: radial-gradient(at 0 0, red, 10%,  #0000),
+                radial-gradient(at 100% 0, green, 10%,  #0000),
+                radial-gradient(at 0 100%, blue, 10%, #0000),
+                radial-gradient(at 100% 100%, black, 10%, #0000)
+            ;
+        }
+        .block25{
+            background: radial-gradient(at 0 0, red, 10%,  #0000),
+                radial-gradient(at 100% 0, green, 10%,  #0000),
+                radial-gradient(at 0 100%, blue, 10%, #0000),
+                radial-gradient(at 100% 100%, black, 10%, #0000),
+                repeating-linear-gradient(#0000 0 98px, rgb(221, 135, 135) 98px 100px)
+            ;
+        }
+        .block26{
+            background: repeating-radial-gradient(at 0 0, red,  #0000 20px);
+        }
+        .block27{
+            background: repeating-radial-gradient( #0000 0 30px,  red 30px 40px);
+        }
+        .block28{
+            background:
+                url('./phone.svg'),
+                repeating-radial-gradient( #0000 0 30px,  red 30px 40px);
+            background-color: blue;
+        }
+        
+        .block29{
+            background: conic-gradient(red, blue);
+        }
+        
+        .block30{
+            background: conic-gradient(at 30% 30%, red, blue);
+        }
+        .block31{
+            background: conic-gradient(from 45deg, red, blue);
+        }
+        .block32{
+            background: conic-gradient(from 45deg at 30% 30%, red, blue);
+        }
+        .block33{
+            background: conic-gradient(red, blue 300deg, green);
+        }
+        .block34{
+            background: conic-gradient(red 0 120deg, blue 120deg 240deg, green 240deg 360deg);
+        }
+        .block35{
+            background: conic-gradient(at 0 0, red 0 135deg, #0000 135deg 360deg);
+        }
+        .block36{
+            background: conic-gradient(from 90deg at 0 0, red 0 45deg, #0000 45deg 360deg);
+        }
+        .block37{
+            background: repeating-conic-gradient(red 0 4deg, #0000 4deg 10deg);
+        }
+        .block38{
+            background: repeating-conic-gradient(orange 0 4deg, #0000 4deg 10deg),
+            radial-gradient(orange 40%, #0000 40% );
+            border-radius: 100%;
+            border: none;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="block block1" id="b1">1</div>
+        <div class="block block2" id="b2">2</div>
+        <div class="block block3" id="b3">3</div>
+        <div class="block block4" id="b4">4</div>
+        <div class="block block5" id="b5">5</div>
+        <div class="block block6" id="b6">6</div>
+        <div class="block block7" id="b7">7</div>
+        <div class="block block8" id="b8">8</div>
+        <div class="block block9" id="b9">9</div>
+        <div class="block block10" id="b10">10</div>
+        <div class="block block11" id="b11">11</div>
+        <div class="block block12" id="b12">12</div>
+        <div class="block block13" id="b13">13</div>
+        <div class="block block14" id="b14">14</div>
+        <div class="block block15" id="b15">15</div>
+        <div class="block block16" id="b16">16</div>
+        <div class="block block17" id="b17">17</div>
+        <div class="block block18" id="b18">18</div>
+        <div class="block block19" id="b19">19
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus corporis dignissimos doloremque vero. Soluta officiis ab ad nostrum quae delectus quasi maiores eligendi quis magni nisi eius, porro natus sint.
+            Praesentium laboriosam inventore veritatis corporis officiis voluptates officia dolores dolorem sequi itaque! Cumque repellat soluta, blanditiis nam autem distinctio eius amet earum cupiditate temporibus consequatur maiores et itaque possimus placeat?
+            Odit a cum provident nesciunt illo dolorem, tempore amet maiores, veritatis officiis quidem, itaque laborum optio! Architecto at cumque cupiditate repellat porro, quia corporis minus eius, sequi omnis nobis atque?
+            Tempore voluptate cum magnam tenetur similique! Molestiae mollitia doloremque cum sit quisquam veniam alias odio totam praesentium laboriosam magnam, iure voluptates repellat itaque error fuga voluptatem amet adipisci delectus asperiores?
+            Dolor commodi tempore eos consectetur explicabo, aliquid aspernatur repudiandae doloremque quam nihil possimus dicta. Aperiam illum omnis dolores fuga neque sit facilis nam ab nobis, deleniti nulla enim hic laudantium.
+            Corrupti dolorem at quos nobis sed odio facilis itaque ipsa error. Placeat accusantium laudantium commodi voluptatem quo amet earum neque at aspernatur enim. Officiis, inventore. Tenetur nihil eum placeat dicta!
+            Voluptates quod dicta dolorum iure omnis doloremque minus quas culpa labore nulla, non id error eos, a nisi pariatur sint amet fugiat qui possimus commodi perspiciatis. Pariatur quas itaque saepe?
+            Culpa aspernatur voluptatum voluptas nam porro itaque voluptates nobis asperiores aperiam, labore, ipsum ipsam fugit qui a illum molestias! Cum consequuntur hic modi officia delectus repellendus sunt expedita sed? Totam.
+            Corrupti, natus exercitationem necessitatibus eveniet aliquid expedita ex fugiat sapiente totam dolorum dolorem nostrum quas dicta minima velit illum itaque cum soluta hic sunt repellendus perferendis maxime. Quae, assumenda in!
+            Possimus beatae iusto enim! Ut fuga ullam facilis corrupti assumenda, esse ipsa doloribus, dolores animi molestias fugiat omnis laboriosam amet labore delectus quod nulla impedit, harum tempore quae consequatur? Fugiat?
+        </div>
+        <div class="block block20" id="b20">
+            20
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, facilis? Expedita in dolorem asperiores et excepturi aut sunt velit doloribus reprehenderit enim cum, officiis quod voluptate delectus, similique cumque numquam.
+            Corrupti ea ad animi consequatur in molestias cumque ipsa provident nihil similique dolorum soluta reprehenderit hic possimus sunt veritatis, rerum, sed et. Deleniti impedit blanditiis quos vel nemo amet doloremque!
+            Beatae voluptas placeat sequi molestias dicta minus molestiae repudiandae nam cumque, pariatur suscipit! Nisi reiciendis id aspernatur! Repellendus facilis, esse similique dolor quae nulla. Ab voluptate tempore distinctio. Ut, odit.
+            Itaque accusamus maxime aperiam odit nisi tempore, mollitia nulla recusandae totam optio deserunt enim dignissimos excepturi doloremque illum. Sit laborum doloribus, repellendus tenetur culpa ex? Sed praesentium rem iusto soluta?
+            Possimus debitis enim perspiciatis recusandae soluta. Est maxime, earum error non iusto illum. Sit odio similique tempore voluptate. Tenetur possimus corrupti cum dignissimos voluptate neque totam dicta reiciendis sunt architecto.
+            Exercitationem voluptates unde, praesentium facere velit distinctio dolore odit. Dolore quia dolorem sit id repudiandae consequatur at sint, beatae aliquid fuga ducimus itaque alias placeat excepturi aperiam velit, quibusdam tempore.
+            Magni rem, quae cupiditate rerum ex saepe et ipsam velit praesentium aperiam, impedit reiciendis minima architecto sequi temporibus ducimus. Aliquam blanditiis dolorem culpa quod sequi praesentium assumenda. Rerum, eaque aliquam.
+            Odit repellendus architecto accusamus quis quibusdam facere, voluptatem, autem non molestiae atque debitis suscipit et eaque veritatis nemo totam, adipisci corrupti itaque cumque error esse. Rem mollitia placeat praesentium et.
+            Vel voluptatum recusandae, quaerat quisquam dolor quia quibusdam dolore eius qui possimus veritatis pariatur minus earum aspernatur natus, ullam alias ad, maiores velit. Asperiores quibusdam, quasi ab beatae earum facere!
+            Doloribus veniam suscipit dolore saepe, quae, similique alias ea consectetur quam fugit accusamus veritatis repellendus, eveniet architecto. Similique quaerat, iste fugit labore commodi exercitationem earum, non optio suscipit mollitia assumenda!
+        </div>
+        <div class="block block21" id="b21">21</div>
+        <div class="block block22" id="b22">22</div>
+        <div class="block block23" id="b23">23</div>
+        <div class="block block24" id="b24">24</div>
+        <div class="block block25" id="b25">25</div>
+        <div class="block block26" id="b26">26</div>
+        <div class="block block27" id="b27">27</div>
+        <div class="block block28" id="b28">28</div>
+        <div class="block block29" id="b29">29</div>
+        <div class="block block30" id="b30">30</div>
+        <div class="block block31" id="b31">31</div>
+        <div class="block block32" id="b32">32</div>
+        <div class="block block33" id="b33">33</div>
+        <div class="block block34" id="b34">34</div>
+        <div class="block block35" id="b35">35</div>
+        <div class="block block36" id="b36">36</div>
+        <div class="block block37" id="b37">37</div>
+        <div class="block block38" id="b38">38</div>
+    </div>
+</body>
+</html>
