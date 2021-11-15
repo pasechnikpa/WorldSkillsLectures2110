@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes test {
+            from{
+                clip-path: circle(300px at 0 0);
+            }
+            to{
+                clip-path: circle(100px at 0 0);
+            }
+        }
+        @keyframes test2 {
+            from{
+                clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%  );
+            }
+            to{
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 100% );
+            }
+        }
+        body{
+            margin: 0;
+            background: red;
+        }
+        .block{
+            /* position: absolute; */
+            /* top:-300px; */
+            /* left:-300px; */
+            width: 600px;
+            aspect-ratio: 1;
+            background: url('card.jpg');
+            background-size: cover;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .block1{
+            animation-name: test;
+        }
+        .block2{
+            position: absolute;
+            right:0;
+            top:0;
+            clip-path: polygon(90% 0, 100% 0, 100% 100% );
+            animation-name: test2;
+        }
+    </style>
+</head>
+<body>
+    <div class="block block1">
+    </div>
+    <div class="block block2">
+    </div>
+</body>
+</html>

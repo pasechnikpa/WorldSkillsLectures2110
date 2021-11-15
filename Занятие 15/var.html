@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        :root{
+            --primary-color: rgb(177, 77, 10);
+            --header-height: 10px;
+            --footer-height: 10px;
+        }
+        @media (min-width: 300px){
+            :root{
+                --primary-color: rgb(10, 177, 60);
+                --header-height: 100px;
+                --footer-height: 100px;
+            }
+        }
+        .header{
+            background: var(--primary-color);
+            min-height: var(--header-height);
+        }
+        .section{
+            min-height: calc(100vh - var(--footer-height) - var(--header-height));
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .title{
+            color: var(--primary-color);
+        }
+        .button{
+            --primary-color: red;
+            background: var(--primary-color);
+            padding: 10px 20px;
+            width: fit-content;
+            border-radius: 12px;
+            color: white;
+        }
+        .footer{
+            background: var(--primary-color);
+            min-height: var(--footer-height);
+        }
+    </style>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="section">
+        <h1 class="title">Heading</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem sed voluptates ex quis doloremque eius, esse nam iusto, deserunt enim quaerat maxime asperiores ducimus laborum adipisci tempore voluptatibus fugit ea!</p>
+        <div class="button">button</div>
+    </div>
+    <div class="footer">
+        
+    </div>
+</body>
+</html>

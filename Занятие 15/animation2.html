@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes image-fly{
+            from {
+                transform: translate(100vw, 0) rotate(15deg);
+            }
+            to {
+                transform: translate(0, 0) rotate(15deg);
+            }
+        }
+        @keyframes heading {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        *{
+            margin: 0;
+        }
+        .block{
+            height: 100vh;
+            padding: 20px;
+        }
+        .card{
+            flex-grow: 0;
+            flex-shrink: 0;
+            width: 300px;
+            height: 200px;
+            background: url('card.jpg');
+
+        }
+        .card1{
+            animation-name: image-fly;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+        .block1{
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        .left-col h1{
+            animation-name: heading;
+            animation-duration: 3s;
+        }
+        .container{
+            position: relative;
+        }
+        .card-border-title{
+            transform: rotate(5deg);
+            transform-origin: 50% 130px;
+            transition: 1s;
+            width: fit-content;
+        }
+        .container:hover .card-border-title{
+            transform: none;
+        }
+        .card-title{
+            height: 30px;
+        }
+        .card-border{
+            width: 300px;
+            height: 200px;
+            /* border:10px solid red; */
+            background: #7a7a7a;
+            box-sizing: border-box;
+            border-radius: 21px;
+        }
+        .card2{
+            position: absolute;
+            top: 30px;
+            left:0;
+            border-radius: 20px;
+        }
+        .container3{
+            transform: rotate(5deg);
+            background: #7a7a7a;
+            width: fit-content;
+            border-radius: 21px;
+            transition: 1s;
+        }
+        .container3:hover{
+            transform: none;
+        }
+        .card3{
+            transform: rotate(-5deg);
+            border-radius: 20px;
+            transition: 1s;
+        }
+        .container3:hover .card3{
+            transform: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="block block1">
+        <div class="left-col">
+            <h1>Heading</h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda laborum magnam odio. Illum animi beatae sunt enim illo ea cupiditate nostrum, reprehenderit, architecto expedita aspernatur vero? Dolor eligendi tenetur obcaecati?
+        </div>
+        <div class="card card1"></div>
+    </div>
+    <div class="block">
+        <div class="container">
+            <div class="card-border-title">
+                <h2 class="card-title">Heading</h2>
+                <div class="card-border"></div>
+            </div>
+            <div class="card card2"></div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="container3">
+            <div class="card card3"></div>
+        </div>
+    </div>
+</body>
+</html>
