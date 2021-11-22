@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /papka/
+Disallow: /file.html
+Disallow: /images/*.gif
+Sitemap: http://example.com/sitemap.xml
