@@ -1,0 +1,30 @@
+- var menu = ['Главная', 'Контакты', 'О нас', 'Товары']
+- var menu2 = [[1, 2, 3], [3,4, 5], [5, 6, 7]]
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+        ul
+            each val1 in ['Главаная', 'Контакты', 'О нас', 'Товары']
+                li: a #{val1}
+    
+        ul
+            each href, val in { 'Главаная': '/', 'Контакты': '/contatc', 'О нас': '/about', 'Товары': '/catalog'}
+                li: a(href=href) #{val}
+        
+        ul
+            each item in menu
+                li: a #{item}
+        h2 #{menu[0]}
+        each item in menu2
+            div #{item[0]} #{item[1]} #{item[2]}
+
+        ul
+            each subMenu in menu2 
+                li: ul
+                    each item in subMenu 
+                        li: a #{item}

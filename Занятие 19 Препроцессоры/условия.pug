@@ -1,0 +1,66 @@
+- var show = "text123123" 
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body
+        h1 Title 
+        if show=="text"
+            div Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus saepe repudiandae sit at debitis, in voluptate laborum, commodi ea dignissimos voluptatem voluptates soluta, labore vero! Architecto omnis nemo dolor tenetur!
+
+        h1 Title 
+        if show=="text"
+            div Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus saepe repudiandae sit at debitis, in voluptate laborum, commodi ea dignissimos voluptatem voluptates soluta, labore vero! Architecto omnis nemo dolor tenetur!
+        else 
+            div NOOOOOOOOOO!!!
+
+        // В перечислении
+        each item in ["text", "123123", "213123123"] 
+            if item=="text"
+                div Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus saepe repudiandae sit at debitis, in voluptate laborum, commodi ea dignissimos voluptatem voluptates soluta, labore vero! Architecto omnis nemo dolor tenetur!
+            else 
+                div NOOOOOOOOOO!!!
+
+        // В миксине
+        mixin my(item)
+            if item=="text"
+                div Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus saepe repudiandae sit at debitis, in voluptate laborum, commodi ea dignissimos voluptatem voluptates soluta, labore vero! Architecto omnis nemo dolor tenetur!
+            else 
+                div NOOOOOOOOOO!!!
+        
+        +my("text1")
+        +my("text")
+        +my("text2")
+        +my("text")
+
+        mixin card(price)
+            .card
+                if price > 1000
+                    div.red #{price}
+                else
+                    div.green #{price}
+
+        +card(888)
+        +card(8883)
+        +card(1488)
+
+        // case
+        mixin card2(color)
+            case color
+                when "red"
+                    .red 1000
+                when "green"
+                    .green 0
+                when "blue"
+                    .blue -100
+                default
+                    .default Неверно указано
+
+        +card2("red")
+        +card2("red1")
+        +card2("green")
+        +card2("red123123")
+        +card2("blue")
