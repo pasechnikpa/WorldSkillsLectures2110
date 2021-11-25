@@ -1,0 +1,249 @@
+.class1 {
+  color: red;
+  background: green;
+  text-align: right;
+  text-decoration: underline;
+  font-size: 12px;
+  font-family: Arial;
+  font-weight: bold;
+  margin: 2px;
+  margin-left: 12px;
+  margin-right: 10px;
+}
+
+.class2 {
+  border: 1px solid red;
+}
+.class2 .class3 {
+  color: red;
+}
+.class2 .class3:hover {
+  color: green;
+}
+
+.card {
+  height: 90vh;
+}
+.card__title {
+  color: red;
+}
+.card__title_green {
+  color: green;
+}
+.card__text {
+  color: red;
+}
+.card__price {
+  color: #cccccc;
+}
+
+.test {
+  color: red;
+}
+
+.class5, .class4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.class4 {
+  color: blue;
+}
+
+.class5 {
+  color: green;
+}
+.class5::-webkit-input-placeholder {
+  color: red;
+}
+.class5::-moz-placeholder {
+  color: red;
+}
+.class5:-ms-input-placeholder {
+  color: red;
+}
+.class5::-ms-input-placeholder {
+  color: red;
+}
+.class5::placeholder {
+  color: red;
+}
+
+.class6 {
+  -webkit-clip-path: circle(100px);
+          clip-path: circle(100px);
+}
+
+.class8, .class7 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.class7 {
+  width: "100px";
+  min-height: "200px";
+}
+
+.class8 {
+  width: "300px";
+  min-height: "100px";
+}
+
+/*123123123 #cccccc*/
+.class9 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 600px) {
+  .class9 {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.class10 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 600px) {
+  .class10 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.class11 {
+  border: 1px solid red;
+}
+
+.class12 {
+  border: 1px solid green;
+}
+
+.box_red {
+  background-color: red;
+}
+
+.box_blue {
+  background-color: blue;
+}
+
+.box_green {
+  background-color: green;
+}
+
+.box_yellow {
+  background-color: yellow;
+}
+
+.box_magenta {
+  background-color: magenta;
+}
+
+.puma-icon {
+  background-image: url("/images/puma.png");
+}
+
+.sea-slug-icon {
+  background-image: url("/images/sea-slug.png");
+}
+
+.egret-icon {
+  background-image: url("/images/egret.png");
+}
+
+.salamander-icon {
+  background-image: url("/images/salamander.png");
+}
+
+.pl-1 {
+  padding-left: 10px;
+}
+
+.pl-2 {
+  padding-left: 20px;
+}
+
+.pl-3 {
+  padding-left: 30px;
+}
+
+.pt-1 {
+  padding-top: 10px;
+}
+
+.pt-2 {
+  padding-top: 20px;
+}
+
+.pt-3 {
+  padding-top: 30px;
+}
+
+.pt-4 {
+  padding-top: 40px;
+}
+
+.pt-5 {
+  padding-top: 50px;
+}
+
+.pt-6 {
+  padding-top: 60px;
+}
+
+.pt-7 {
+  padding-top: 70px;
+}
+
+.pt-8 {
+  padding-top: 80px;
+}
+
+.pt-9 {
+  padding-top: 90px;
+}
+
+.pt-10 {
+  padding-top: 100px;
+}
+
+.class13 {
+  width: 25%;
+}
+
+.class14 {
+  width: 7.1428571429%;
+}
+
+.class15 {
+  width: 3.3333333333%;
+}
+
+.class16 {
+  width: 44.5px;
+}
+
+.class17 {
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.class18 {
+  margin-left: 20px;
+}
+
+.class19 {
+  margin-top: 40px;
+}
+
+.class20 {
+  margin-top: 10px;
+}

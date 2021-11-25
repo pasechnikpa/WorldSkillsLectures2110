@@ -1,0 +1,181 @@
+$color: #cccccc;
+$height: 100vh;
+$number: 1;
+
+.class1{
+    color: red;
+    background: green;
+    text: {
+        align: right;
+        decoration: underline;
+    }
+    font: {
+        size: 12px;
+        family: Arial;
+        weight: bold;
+    }
+    margin: 2px {
+        left: 12px;
+        right: 10px;
+    }
+}
+
+.class2{
+    border: 1px solid red;
+    .class3{
+        color: red;
+        &:hover{
+            color: green;
+        }
+    }
+}
+
+.card{
+    height: $height - 10;
+    &__title{
+        color: red;
+        &_green{
+            color: green;
+        }
+    }
+    &__text{
+        color: red;
+    }
+    &__price{
+        color: $color;
+    }
+}
+
+@import 'part';
+
+
+%flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.class4{
+    @extend %flex;
+    color: blue;
+}
+.class5{
+    @extend %flex;
+    color: green;
+    &::placeholder{
+        color: red;
+    }
+}
+.class6{
+    clip-path: circle(100px);
+}
+
+%box-sizing{
+    box-sizing: border-box;
+}
+@mixin size($w, $h){
+    @extend %box-sizing;
+    width: $w+'px';
+    min-height: $h+'px';
+}
+.class7{
+    @include size(100, 200)
+}
+.class8{
+    @include size(300, 100)
+}
+/*123123123 #{$color}*/
+// comment
+.class9{
+    display: flex;
+    @media (max-width: 600px) {
+        flex-wrap: wrap;
+    }
+}
+.class10{
+    display: flex;
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
+}
+.class11{
+    @if $number > 0{
+        border: 1px solid red;
+    }
+}
+
+.class12{
+    @if $number < 0{
+        border: 1px solid red;
+    } @else {
+        border: 1px solid green;
+    }
+}
+@each $color in red, blue, green, yellow, magenta{
+    .box_#{$color}{
+        background-color: $color;
+    }
+}
+
+@each $animal in puma, sea-slug, egret, salamander {
+  .#{$animal}-icon {
+    background-image: url('/images/#{$animal}.png');
+  }
+}
+@each $var in 1,2,3 {
+    .pl-#{$var}{
+        padding-left: $var *10px;
+    }
+}
+@for $i from 1 through 10{
+    .pt-#{$i}{
+        padding-top: $i*10px;
+    }
+}
+
+@function colWidth($count){
+    @return 100% / $count;
+}
+.class13{
+    width: colWidth(4)
+}
+
+.class14{
+    width: colWidth(14)
+}
+
+.class15{
+    width: colWidth(30)
+}
+@function colWidthCounted($width, $gap, $count){
+    @return ($width - ($gap*($count+1)))/ $count;
+}
+.class16{
+    width: colWidthCounted(500px, 5px, 10)
+}
+
+
+$mr: 'margin-right';
+.class17{
+    #{$mr}: 10px;
+    margin-bottom: 20px;
+}
+
+@function paddingDirect($row){
+    @if($row == true){
+        @return 'margin-left';
+    }
+    @else {
+        @return 'margin-top'
+    }
+}
+.class18{
+    $d: paddingDirect(true);
+    #{$d}: 20px;
+}
+
+.class19{
+    $d: paddingDirect(false);
+    #{$d}: 40px;
+}
+.class20{
+    #{paddingDirect(false)}: 10px;
+}
