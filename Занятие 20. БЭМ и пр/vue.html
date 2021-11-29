@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .checkbox{
+            background-color: #EF9A9A; 
+            border-radius: 5px;
+            padding: 10px;;
+        }
+        .checkbox_checked{
+            background-color: #81C784;
+        }
+        .card{
+            /* width: fit-content; */
+            /* min-height: 582px; */
+            box-shadow: 2px 8px 5px rgba(194, 198, 208, 0.6);
+            /* border:1px solid black; */
+            padding: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/x-template" id="card">
+        <div class="card card_red">
+            <div class="card-info card__info">
+                <div class="card-info__title">{{title}}</div>
+                <div class="card-info__text">
+                    <slot />
+                </div>
+                <div class="card-info__price">
+                    <s v-if="skidka > 0">{{price}}</s>
+                    {{newPrice}} ₽/шт. 
+                </div>
+                <div class="button" @click="order">Заказать</div>
+            </div>
+        </div>
+    </script>
+    <div id="app">
+        <h1>{{title}}</h1>
+        <p>{{ message }}</p> 
+        <input v-model="message" />
+        <p v-for="i in 3">
+            test {{i}}
+        </p>
+        <ul>
+            <li v-for="a in ['Ананас', 'Абрикос']">
+                {{a}}
+            </li>
+        </ul>
+        <input type="checkbox" v-model="checkBox" />
+        <div 
+            @click="buttonClick" 
+            class="checkbox" 
+            :class="{'checkbox_checked': checkBox, 'test': a}"
+        >Клон чекбокса</div>
+        <p v-if="checkBox">
+            Чекбок нажат
+        </p>
+        <p v-else>
+            Чекбокc НЕ нажат
+        </p>
+        <h2>Сумма чисел</h2>
+        <input type="number" v-model="a" />
+        <input type="number" v-model="b" />
+        <p>{{c}}</p>
+        <todo-item></todo-item>
+        <card 
+            title="Кремовый замок"  
+            price="100"
+            @order="order"
+            >
+            Нежный крем любого цвета на выбор, вафельная основа
+        </card>
+        <card 
+            title="Карточка 2"  
+            price="200"
+            @order="order"
+        >
+            Описание карточки 2
+        </card>
+        <ul>
+            <li v-for="order in orders">{{order}}</li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        Vue.component('todo-item', {
+            template: '<li>Это одна задача в списке</li>'
+        })
+        Vue.component('card', {
+            template: '#card',
+            props: ['title', 'price'],
+            data(){
+                return {
+                    skidka: 30,
+                }
+            },
+            computed: {
+                newPrice(){
+                    return this.price - this.price / 100 * this.skidka
+                }
+            },
+            methods: {
+                order(){
+                    this.$emit('order', this.title)
+                    console.log('Закзать!')
+                }
+            }
+        })
+        var app = new Vue({
+            el: '#app',
+            data: {
+                title: 'Название',
+                message: 'Привет, Vue!',
+                checkBox: false, // true
+                a: 0,
+                b: 0,
+                orders: [],
+            },
+            computed: {
+                c(){
+                    return this.a*1+parseFloat(this.b)
+                }
+            },
+            watch: {
+                a(){
+                    console.log('В "a" ввели', this.a)
+                }
+            },
+            methods: {
+                buttonClick(){
+                    this.checkBox = !this.checkBox
+                },
+                order(title){
+                    this.orders.push(title)
+                }
+            }
+        })
+    </script>
+</body>
+</html>
